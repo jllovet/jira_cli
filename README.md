@@ -6,6 +6,30 @@
 
 The Jira CLI allows you to configure and manage your Jira instance using simple commands from your terminal.
 
+## Usage
+
+The Jira CLI comes with built-in help to explain how you can use each command.
+
+```shell
+python jira.py --help
+```
+
+To get an overview of the commands that are available, you can use the tree command.
+
+```shell
+python jira.py tree
+```
+
+This will output a tree of the commands available to you.
+
+All output to stdout will be in json format, so that the cli can be consumed easily by other systems. A powerful command line tool for dealing with json is [jq](https://stedolan.github.io/jq/). The Jira CLI and jq go hand-in-hand together.
+
+For instance, you can pass a user from the Jira CLI to jq to extract and transform information after you've retrieved it from Jira. Here's a simple transformation you might do before passing the user on to another command.
+
+```shell
+python jira.py user get --username mproust | jq '{"email": .emailAddress, "displayName": .displayName, "isActive": .active}'
+```
+
 ## Setup
 
 We strongly recommend that you use either a docker container or a python virtual environment to separate your configuration from your host.
