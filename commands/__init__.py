@@ -8,6 +8,7 @@ from .filter import filter_cmd
 from .issue import issue_cmd
 from .project import project_cmd
 from .sprint import sprint_cmd
+from .audit_record import audit_record_cmd
 
 command_groups = [
     tree_cmd,
@@ -18,5 +19,6 @@ command_groups = [
     filter_cmd,
     issue_cmd,
     project_cmd,
-    sprint_cmd
+    sprint_cmd,
+    audit_record_cmd
 ]
