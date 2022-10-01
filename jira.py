@@ -4,12 +4,12 @@ from commands import command_groups
 
 
 @click.group()
-def cli():
+def jira():
     pass
 
 
 for command in command_groups:
-    cli.add_command(command, command.name)
+    jira.add_command(command, command.name)
 
 if __name__ == "__main__":
-    cli()
+    jira()
