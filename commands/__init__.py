@@ -6,6 +6,7 @@ from .board import board_cmd
 from .dashboard import dashboard_cmd
 from .filter import filter_cmd
 from .issue import issue_cmd
+from .component import component_cmd
 from .project import project_cmd
 from .sprint import sprint_cmd
 from .audit_record import audit_record_cmd
@@ -18,6 +19,7 @@ command_groups = [
     dashboard_cmd,
     filter_cmd,
     issue_cmd,
+    component_cmd,
     project_cmd,
     sprint_cmd,
     audit_record_cmd
