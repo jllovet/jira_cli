@@ -1,5 +1,8 @@
 import click
+from .attachment import attachment_cmd
 
-@click.command(name="issue", help="Manage issues")
+@click.group(name="issue", help="Manage issues")
 def issue_cmd():
-    raise click.UsageError("This command hasn't been implemented yet")
+    pass
+
+issue_cmd.add_command(attachment_cmd)
