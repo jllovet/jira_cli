@@ -5,7 +5,7 @@ setup:
 	python3 -m venv .venv
 
 environment:
-	cp .private.env .env
+	cp .example.env .env
 
 install:
 	pip3 install -r requirements.txt --require-virtualenv
