@@ -1,8 +1,10 @@
-# Jira CLI
+# Jira CLI 
+
+![Jira CLI](jira_logo.png)
 
 The Jira CLI allows you to configure and manage your Jira instance using simple commands from your terminal.
 
-## Usage
+## Setup
 
 We strongly recommend that you use either a docker container or a python virtual environment to separate your configuration from your host.
 
