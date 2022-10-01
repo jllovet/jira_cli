@@ -1,5 +1,6 @@
 import click
 from .attachment import attachment_cmd
+from .comment import comment_cmd
 from .worklog import worklog_cmd
 from .label import label_cmd
 from .field import field_cmd
@@ -15,6 +16,7 @@ def issue_cmd():
 
 
 issue_cmd.add_command(attachment_cmd)
+issue_cmd.add_command(comment_cmd)
 issue_cmd.add_command(worklog_cmd)
 issue_cmd.add_command(label_cmd)
 issue_cmd.add_command(field_cmd)
