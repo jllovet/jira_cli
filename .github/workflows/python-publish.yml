@@ -11,6 +11,12 @@ name: Upload Python Package
 on:
   release:
     types: [published]
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 permissions:
   contents: read
@@ -37,3 +43,4 @@ jobs:
       with:
         user: __token__
         password: ${{ secrets.PYPI_API_TOKEN }}
+
