@@ -1,6 +1,6 @@
 from the_jira_cli.config import *
 import click
-import the_jira_cli.cli
+import the_jira_cli.cli as cli
 import json
 import sys
 
