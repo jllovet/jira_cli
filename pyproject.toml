@@ -5,7 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "the-jira-cli"
 description = "Manage Jira from the Terminal"
-authors = [{ "name" = "Jonathan Llovet", "email" = "jonathan.llovet@gmail.com" }]
+authors = [
+    { "name" = "Jonathan Llovet", "email" = "jonathan.llovet@gmail.com" },
+]
 readme = "README.md"
 keywords = ["Jira", "Atlassian", "Project", "Management", "CLI"]
 license = { text = "MIT License" }
@@ -20,6 +22,10 @@ classifiers = [
     "Programming Language :: Python",
 ]
 dynamic = ["version", "dependencies"]
+
+[project.urls]
+repository = "https://github.com/jllovet/the-jira-cli"
+homepage = "https://github.com/jllovet/the-jira-cli"
 
 [project.scripts]
 jira = "the_jira_cli.jira:jira"
