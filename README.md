@@ -8,7 +8,7 @@ The Jira CLI allows you to configure and manage your Jira instance using simple 
 
 ## Installation
 
-You can install the Jira CLI using pip. [Check us out on PyPI](https://pypi.org/project/the-jira-cli/).
+You can install the Jira CLI using pip. [Check us out on PyPI](https://pypi.org/project/the-jira-cli/)
 
 ```shell
 pip install the-jira-cli
