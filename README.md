@@ -1,7 +1,7 @@
 # The Jira CLI - Manage Jira from the Terminal
 
 <p align="center">
-  <img src="https://github.com/jllovet/jira_cli/blob/master/jira_logo.png?raw=true" alt="Jira Logo"/>
+  <img src="https://raw.githubusercontent.com/jllovet/the-jira-cli/master/jira_logo.png" alt="Jira Logo"/>
 </p>
 
 The Jira CLI allows you to configure and manage your Jira instance using simple commands from your terminal.
