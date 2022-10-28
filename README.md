@@ -1,4 +1,4 @@
-# Jira CLI - Manage Jira from the Terminal
+# The Jira CLI - Manage Jira from the Terminal
 
 <p align="center">
   <img src="https://github.com/jllovet/jira_cli/blob/master/jira_logo.png?raw=true" alt="Jira Logo"/>

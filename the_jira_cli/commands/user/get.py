@@ -1,8 +1,7 @@
-from config import *
+from the_jira_cli.config import *
 import click
-import cli
+import the_jira_cli.cli
 import json
-import inquirer
 import sys
 
 
