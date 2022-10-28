@@ -1,5 +1,7 @@
 .DS_Store
 .venv
 .env
+dist/*
+*.egg-info/
 __pycache__
 **private**
