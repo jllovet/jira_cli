@@ -14,6 +14,8 @@ def no_args() -> bool:
             a is not None
             and a != ""
             and a != False
+            and a != ()
+            and a != dict()
             for a in frame.f_back.f_locals.values()
         ])
     finally:
