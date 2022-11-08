@@ -18,13 +18,13 @@ clean:
 	rm -rf ./build
 
 test:
-	echo "Testing"
+	pytest
 
 build:
 	python3 -m build
 
 install-editable:
-	pip install --editable .
+	pip3 install --editable .
 
 publish-test:
 	python3 -m twine upload --repository testpypi dist/*
