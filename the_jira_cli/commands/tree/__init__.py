@@ -1,7 +1,8 @@
 import click
 
 
-# Adapted from https://github.com/whwright/click-command-tree/click_command_tree.py
+# Adapted from
+# https://github.com/whwright/click-command-tree/click_command_tree.py
 @click.command(name='tree', help="Show the command tree of the cli")
 @click.pass_context
 def tree_cmd(ctx):

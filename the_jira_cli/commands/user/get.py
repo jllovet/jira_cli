@@ -5,15 +5,39 @@ import json
 import sys
 
 
-@click.command("get", help="get or search for a user")
-@click.option("--username", help="search for a user by username", type=str, required=False)
-@click.option("--email", help="search for a user by email", type=str, required=False)
-@click.option("--key", help="get a user by key", type=str, required=False)
-@click.option("--account-id", help="get a user by account_id", type=str, required=False)
-@click.option("--expand-application-roles", is_flag=True, help="expand the user's application roles", default=False)
-@click.option("--expand-groups", is_flag=True, help="expand the user's groups", default=False)
-def get_cmd(username, email, key, account_id, expand_application_roles, expand_groups):
-    if cli.no_args():
+@click.command("get",
+               help="get or search for a user")
+@click.option("--username",
+              help="search for a user by username",
+              type=str,
+              required=False)
+@click.option("--email",
+              help="search for a user by email",
+              type=str,
+              required=False)
+@click.option("--key",
+              help="get a user by key",
+              type=str,
+              required=False)
+@click.option("--account-id",
+              help="get a user by account_id",
+              type=str,
+              required=False)
+@click.option("--expand-application-roles",
+              is_flag=True,
+              help="expand the user's application roles",
+              default=False)
+@click.option("--expand-groups",
+              is_flag=True,
+              help="expand the user's groups",
+              default=False)
+def get_cmd(username,
+            email,
+            key,
+            account_id,
+            expand_application_roles,
+            expand_groups):
+    if not cli.has_args():
         cli.print_help()
     expand = []
     if expand_application_roles:
@@ -49,8 +73,8 @@ def print_user(user: dict | list) -> None:
 
 def resolve(user):
     """Prints out a summary of the users found for the cli user to choose from
-    This function writes all prompts to the user to stderr so that the json output
-    of the cli is left intact for downstream consumers
+    This function writes all prompts to the user to stderr so that the json
+    output of the cli is left intact for downstream consumers
     """
     click.echo("\nMultiple users found:\n", err=True)
     user_candidates = dict()

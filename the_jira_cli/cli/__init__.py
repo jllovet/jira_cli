@@ -3,19 +3,19 @@ import inspect
 import json
 
 
-def no_args() -> bool:
-    """ Checks whether no arguments were passed to the command
+def has_args() -> bool:
+    """ Checks whether arguments were passed to the command
     Uses inspect to examine the local variables of the caller
     Kudos to: https://stackoverflow.com/a/6618825
     """
     frame = inspect.currentframe()
     try:
-        return not any([
+        return any([
             a is not None
             and a != ""
-            and a != False
             and a != ()
             and a != dict()
+            and a
             for a in frame.f_back.f_locals.values()
         ])
     finally:

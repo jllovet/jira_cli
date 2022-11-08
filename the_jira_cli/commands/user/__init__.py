@@ -8,6 +8,7 @@ from .get import get_cmd
 def user_cmd():
     pass
 
+
 user_cmd.add_command(avatar_cmd)
 user_cmd.add_command(group_cmd)
 user_cmd.add_command(get_cmd)
