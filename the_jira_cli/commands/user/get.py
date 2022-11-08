@@ -1,6 +1,6 @@
-from the_jira_cli.config import *
+from ...config import *
 import click
-import the_jira_cli.cli as cli
+from ...cli import Cli
 import json
 import sys
 
@@ -37,8 +37,8 @@ def get_cmd(username,
             account_id,
             expand_application_roles,
             expand_groups):
-    if not cli.has_args():
-        cli.print_help()
+    if not Cli.has_args():
+        Cli.print_help()
     expand = []
     if expand_application_roles:
         expand.append("applicationRoles")
@@ -60,15 +60,15 @@ def get_cmd(username,
 def print_user(user: dict | list) -> None:
     if isinstance(user, list):
         if len(user) == 0:
-            cli.echo_msg(msg="user not found")
+            Cli.echo_msg(msg="user not found")
         elif len(user) == 1:
-            cli.echo_data(user[0])
+            Cli.echo_data(user[0])
         elif len(user) > 1:
-            cli.echo_data(resolve(user))
+            Cli.echo_data(resolve(user))
     elif isinstance(user, dict):
-        cli.echo_data(user)
+        Cli.echo_data(user)
     else:
-        cli.echo_msg(msg="user not found")
+        Cli.echo_msg(msg="user not found")
 
 
 def resolve(user):
